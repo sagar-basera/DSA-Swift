@@ -84,5 +84,46 @@ class BinarySearch {
         return ans
     }
     
+    //MARK: - Floor in Sorted Array.
+    /// The largest element present in the array which is smaller or equal to K.
+    /// i.e., arr[mid] <= K
+    func floor(arr: [Int], K: Int) -> Int {
+        var low = 0
+        var high = arr.count - 1
+        var ans = -1
+        
+        while low <= high {
+            let mid = low + (high-low)/2
+            
+            if arr[mid] <= K {
+                ans = arr[mid]
+                low = mid + 1
+            }else {
+                high = mid - 1
+            }
+        }
+        return ans
+    }
+    
+    //MARK: - Ceil in Sorted Array.
+    /// The smallest element present in the array which is greater or equal to K.
+    /// i.e., arr[mid] >= K.
+    func ceil(arr: [Int], k: Int) -> Int {
+        var low = 0
+        var high = arr.count - 1
+        var ans = -1
+        
+        while low <= high {
+            let mid = low + (high-low)/2
+            
+            if arr[mid] >= k {
+                ans = arr[mid]
+                high = mid - 1
+            }else {
+                low = mid + 1
+            }
+        }
+        return ans
+    }
     
 }

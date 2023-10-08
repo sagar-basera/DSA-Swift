@@ -21,3 +21,9 @@ print(binarySearch.lowerBound(arr: arr, K: 22))
 
 //MARK: - 4.Upper Bound.
 print(binarySearch.upperBound(arr: arr, K: 7))
+
+//MARK: - 5.Floor in Sorted Array.
+print("Floor in Sorted Array: \(binarySearch.floor(arr: arr, K: 10))")
+
+//MARK: - 5.Ceil in Sorted Array.
+print("Ceil in Sorted Array: \(binarySearch.ceil(arr: arr, k: 10))")
