@@ -8,6 +8,7 @@
 import Foundation
 
 let binarySearch = BinarySearch()
+let patterns = Patterns()
 
 //MARK: - 1.Binary Search Algorithm.
 let arr: [Int] = [1, 4, 5, 7, 9, 11, 14]
@@ -27,3 +28,6 @@ print("Floor in Sorted Array: \(binarySearch.floor(arr: arr, K: 10))")
 
 //MARK: - 5.Ceil in Sorted Array.
 print("Ceil in Sorted Array: \(binarySearch.ceil(arr: arr, k: 10))")
+
+//MARK: - PATTERNS.
+print(patterns.pattern1(n: 4))
