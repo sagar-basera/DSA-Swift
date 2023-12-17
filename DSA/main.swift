@@ -9,6 +9,7 @@ import Foundation
 
 let binarySearch = BinarySearch()
 let patterns = Patterns()
+let array = Arrays()
 
 //MARK: - 1.Binary Search Algorithm.
 let arr: [Int] = [1, 4, 5, 7, 9, 11, 14]
@@ -31,3 +32,11 @@ print("Ceil in Sorted Array: \(binarySearch.ceil(arr: arr, k: 10))")
 
 //MARK: - PATTERNS.
 print(patterns.pattern1(n: 4))
+
+//MARK: - ARRAY QUESTIONS.
+print("QUESTIONS ON ARRAY'S__________________________________________")
+//MARK: - 1. Largest element in an Array.
+print(array.largestElementInArr(arr: [3, 2, 1, 9, 2, 7]))
+
+//MARK: - 2. Second largest element in an Array.
+print(array.secondLargestElementInArr(arr: [2,5,5,8,8,3,7]))
