@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B35EE2EA2AE98B06007063F9 /* Patterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35EE2E92AE98B06007063F9 /* Patterns.swift */; };
 		B3BF50D12B2D9B9C009C31AB /* Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BF50D02B2D9B9C009C31AB /* Arrays.swift */; };
+		B3CC77182B3B3E0A008005BA /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC77172B3B3E0A008005BA /* Maths.swift */; };
 		B3E63C782AD182C200738B31 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E63C772AD182C200738B31 /* main.swift */; };
 		B3E63C7F2AD1844500738B31 /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E63C7E2AD1844500738B31 /* BinarySearch.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		B35EE2E92AE98B06007063F9 /* Patterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patterns.swift; sourceTree = "<group>"; };
 		B3BF50D02B2D9B9C009C31AB /* Arrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrays.swift; sourceTree = "<group>"; };
+		B3CC77172B3B3E0A008005BA /* Maths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
 		B3E63C742AD182C200738B31 /* DSA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DSA; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E63C772AD182C200738B31 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B3E63C7E2AD1844500738B31 /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				B3E63C7E2AD1844500738B31 /* BinarySearch.swift */,
 				B35EE2E92AE98B06007063F9 /* Patterns.swift */,
 				B3BF50D02B2D9B9C009C31AB /* Arrays.swift */,
+				B3CC77172B3B3E0A008005BA /* Maths.swift */,
 			);
 			path = DSA;
 			sourceTree = "<group>";
@@ -132,6 +135,7 @@
 				B3E63C7F2AD1844500738B31 /* BinarySearch.swift in Sources */,
 				B3BF50D12B2D9B9C009C31AB /* Arrays.swift in Sources */,
 				B3E63C782AD182C200738B31 /* main.swift in Sources */,
+				B3CC77182B3B3E0A008005BA /* Maths.swift in Sources */,
 				B35EE2EA2AE98B06007063F9 /* Patterns.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
