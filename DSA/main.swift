@@ -49,4 +49,5 @@ print("QUESTIONS ON MATH'S__________________________________________")
 var dig = 3524
 print(maths.countDigits(n: &dig))
 
-//MARK: - 2. 
+//MARK: - 2. ARMSTRONG NUMBER.
+print("is Armstrong Number, \(maths.armstrongNumber(371))")
