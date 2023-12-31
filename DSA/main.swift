@@ -11,6 +11,7 @@ let binarySearch = BinarySearch()
 let patterns = Patterns()
 let array = Arrays()
 let maths = Maths()
+let recursion = Recursion()
 
 //MARK: - 1.Binary Search Algorithm.
 let arr: [Int] = [1, 4, 5, 7, 9, 11, 14]
@@ -51,3 +52,6 @@ print(maths.countDigits(n: &dig))
 
 //MARK: - 2. ARMSTRONG NUMBER.
 print("is Armstrong Number, \(maths.armstrongNumber(371))")
+
+//MARK: - 3. PRINT ALL DIVISORS.
+print(maths.allDivisors(n: 32))

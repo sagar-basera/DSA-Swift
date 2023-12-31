@@ -37,4 +37,36 @@ class Maths {
         return sum == n
     }
     
+    //MARK: - PRINT ALL DIVISORS.
+    func allDivisors(n: Double) {
+        /// Brute Force
+        /// Time Complexity => O(n)
+    /*
+        var i = 1
+        while (i <= n) {
+            if ((n % i) == 0) {
+                print(i, terminator: ",")
+            }
+            i += 1
+        }
+     */
+        /// Optimised Solution.
+        /// Time Complexity => O(sqrt(n)).
+        /// sqrt(n) => (i * i <= n).
+        var i = 1.0
+        
+        while (i <= sqrt(n)) {
+            if ((n.truncatingRemainder(dividingBy: i)) == 0) {
+                print(Int(i), terminator: ",")
+                
+                if ((n / i) != i) {
+                    print(Int(n/i), terminator: ",")
+                }
+            }
+            
+            i += 1
+        }
+    }
+    
+    //MARK: -
 }
