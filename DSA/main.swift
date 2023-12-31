@@ -55,3 +55,6 @@ print("is Armstrong Number, \(maths.armstrongNumber(371))")
 
 //MARK: - 3. PRINT ALL DIVISORS.
 print(maths.allDivisors(n: 32))
+
+//MARK: - 4. PRIME NUMBERS.
+print(maths.primeNumber(n: 7))

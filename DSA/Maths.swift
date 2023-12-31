@@ -68,5 +68,37 @@ class Maths {
         }
     }
     
-    //MARK: -
+    //MARK: - PRINT PRIME NUMBERS.
+    func primeNumber(n: Double) -> Bool{
+        var count = 0
+        var i: Double = 1
+        
+        if n == 1 { return true }
+        /// Brute Force.
+        /// Time Complexity => O(n).
+       /*
+        while (i <= n) {
+            if ((n.truncatingRemainder(dividingBy: i)) == 0) {
+                count += 1
+            }
+            i += 1
+        }
+        */
+        
+        /// Optimised Approach.
+        /// Time Complexity => O(sqrt(n)).
+        while (i <= sqrt(n)) {
+            if ((n.truncatingRemainder(dividingBy: i)) == 0) {
+                count += 1
+                
+                if ((n/i) != i) {
+                    count += 1
+                }
+            }
+            
+            i += 1
+        }
+        
+        return count == 2 ? true : false
+    }
 }
