@@ -58,3 +58,6 @@ print(maths.allDivisors(n: 32))
 
 //MARK: - 4. PRIME NUMBERS.
 print(maths.primeNumber(n: 7))
+
+//MARK: - 5. GCD/HCF.
+print(maths.gcd(n1: 5, n2: 15))

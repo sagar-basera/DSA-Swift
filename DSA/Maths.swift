@@ -101,4 +101,42 @@ class Maths {
         
         return count == 2 ? true : false
     }
+    
+    //MARK: - GCD/HCF.
+    func gcd(n1: Double, n2: Double) -> Int {
+        var gcd: Double = 0
+        var i = 1.0
+        
+        /// Brute Force.
+        /// Time Complexity => O(min(n1, n2)).
+        /*
+        let min = min(n1, n2)
+        
+        while (i <= min) {
+            if (n1.truncatingRemainder(dividingBy: i) == 0) && (n2.truncatingRemainder(dividingBy: i) == 0) {
+                gcd = i
+            }
+            i += 1
+        }
+        */
+        
+        /// Optimal Approach.
+        /// Using Euclidean’s theorem.
+        ///  Gcd is the greatest number which is divided by both a and b.If a number is divided by both a and b, it is should be divided by (a-b) and b as well.
+        ///  gcd(a,b) = gcd(a % b, b), where a > b.
+        ///  Time Complexity => O()
+        
+        var num1 = n1
+        var num2 = n2
+        
+        while (num1 > 0 && num2 > 0) {
+            if num1 > num2 {
+                num1 = num1.truncatingRemainder(dividingBy: num2)
+            }else {
+                num2 = num2.truncatingRemainder(dividingBy: num1)
+            }
+        }
+        
+        return num1 == 0 ? Int(num2) : Int(num1)
+    }
 }
