@@ -14,7 +14,7 @@ class Maths {
         var count = 0
         
         while (n > 0) {
-            let lastDigit  = n % 10
+//            let lastDigit  = n % 10
             count += 1
             n = n / 10
         }
@@ -104,12 +104,11 @@ class Maths {
     
     //MARK: - GCD/HCF.
     func gcd(n1: Double, n2: Double) -> Int {
-        var gcd: Double = 0
-        var i = 1.0
-        
         /// Brute Force.
         /// Time Complexity => O(min(n1, n2)).
         /*
+         var i = 1.0
+        var gcd: Double = 0
         let min = min(n1, n2)
         
         while (i <= min) {
@@ -118,13 +117,15 @@ class Maths {
             }
             i += 1
         }
+         
+         return Int(gcd)
         */
         
         /// Optimal Approach.
         /// Using Euclidean’s theorem.
-        ///  Gcd is the greatest number which is divided by both a and b.If a number is divided by both a and b, it is should be divided by (a-b) and b as well.
-        ///  gcd(a,b) = gcd(a % b, b), where a > b.
-        ///  Time Complexity => O()
+        /// Gcd is the greatest number which is divided by both a and b.If a number is divided by both a and b, it is should be divided by (a-b) and b as well.
+        /// gcd(a,b) = gcd(a % b, b), where a > b.
+        /// Time Complexity => O()
         
         var num1 = n1
         var num2 = n2
@@ -139,4 +140,5 @@ class Maths {
         
         return num1 == 0 ? Int(num2) : Int(num1)
     }
+    
 }

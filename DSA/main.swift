@@ -12,6 +12,7 @@ let patterns = Patterns()
 let array = Arrays()
 let maths = Maths()
 let recursion = Recursion()
+let hashh = Hashing()
 
 //MARK: - 1.Binary Search Algorithm.
 let arr: [Int] = [1, 4, 5, 7, 9, 11, 14]
@@ -31,6 +32,7 @@ print("Floor in Sorted Array: \(binarySearch.floor(arr: arr, K: 10))")
 
 //MARK: - 5.Ceil in Sorted Array.
 print("Ceil in Sorted Array: \(binarySearch.ceil(arr: arr, k: 10))")
+
 
 //MARK: - PATTERNS.
 print(patterns.pattern1(n: 4))
@@ -61,3 +63,22 @@ print(maths.primeNumber(n: 7))
 
 //MARK: - 5. GCD/HCF.
 print(maths.gcd(n1: 5, n2: 15))
+
+
+//MARK: - RECURSION QUESTIONS.
+print("QUESTIONS ON RECURSION __________________________________________")
+
+//MARK: - 1.
+print()
+
+//MARK: - 2.
+
+
+//MARK: - HASHING QUESTIONS.
+print("QUESTIONS ON HASHING __________________________________________")
+
+//MARK: - 1. Count frequency of each element in the array.
+hashh.countFreq(arr: [10,5,10,15,10,5])
+
+//MARK: - 2. Find the highest/lowest frequency element.
+hashh.findLowHighFreq(arr: [10,5,10,15,10,5])
