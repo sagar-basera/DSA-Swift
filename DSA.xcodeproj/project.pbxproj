@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B302239F2B4C5BC300297B57 /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B302239E2B4C5BC300297B57 /* Sorting.swift */; };
 		B35E7AF92B4166BB008D75E1 /* Recursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35E7AF82B4166BB008D75E1 /* Recursion.swift */; };
 		B35EE2EA2AE98B06007063F9 /* Patterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35EE2E92AE98B06007063F9 /* Patterns.swift */; };
 		B3BF03C22B432CC100C4FB63 /* Hashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BF03C12B432CC100C4FB63 /* Hashing.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B302239E2B4C5BC300297B57 /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
 		B35E7AF82B4166BB008D75E1 /* Recursion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recursion.swift; sourceTree = "<group>"; };
 		B35EE2E92AE98B06007063F9 /* Patterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patterns.swift; sourceTree = "<group>"; };
 		B3BF03C12B432CC100C4FB63 /* Hashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashing.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				B3BF50D02B2D9B9C009C31AB /* Arrays.swift */,
 				B3E63C7E2AD1844500738B31 /* BinarySearch.swift */,
 				B3BF03C12B432CC100C4FB63 /* Hashing.swift */,
+				B302239E2B4C5BC300297B57 /* Sorting.swift */,
 			);
 			path = DSA;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				B3E63C782AD182C200738B31 /* main.swift in Sources */,
 				B3CC77182B3B3E0A008005BA /* Maths.swift in Sources */,
 				B35EE2EA2AE98B06007063F9 /* Patterns.swift in Sources */,
+				B302239F2B4C5BC300297B57 /* Sorting.swift in Sources */,
 				B3BF03C22B432CC100C4FB63 /* Hashing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

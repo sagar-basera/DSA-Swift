@@ -13,6 +13,7 @@ let array = Arrays()
 let maths = Maths()
 let recursion = Recursion()
 let hashh = Hashing()
+let sort = Sorting()
 
 //MARK: - 1.Binary Search Algorithm.
 let arr: [Int] = [1, 4, 5, 7, 9, 11, 14]
@@ -82,3 +83,14 @@ hashh.countFreq(arr: [10,5,10,15,10,5])
 
 //MARK: - 2. Find the highest/lowest frequency element.
 hashh.findLowHighFreq(arr: [10,5,10,15,10,5])
+
+
+//MARK: - HASHING QUESTIONS.
+print("QUESTIONS ON SORTING __________________________________________")
+var arrToSort = [13, 46, 24, 52, 20, 9]
+
+//MARK: - 1. Bubble Sort.
+
+
+//MARK: - 1. Selection Sort.
+print(sort.selectionSort(arr: &arrToSort))
