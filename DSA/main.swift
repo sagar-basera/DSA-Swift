@@ -87,10 +87,10 @@ hashh.findLowHighFreq(arr: [10,5,10,15,10,5])
 
 //MARK: - HASHING QUESTIONS.
 print("QUESTIONS ON SORTING __________________________________________")
-var arrToSort = [13, 46, 24, 52, 20, 9]
+var arrToSort = [13, 46, 24, 52, 20, 9, -7]
 
 //MARK: - 1. Bubble Sort.
-
+print(sort.bubbleSort(arr: &arrToSort))
 
 //MARK: - 1. Selection Sort.
 print(sort.selectionSort(arr: &arrToSort))
