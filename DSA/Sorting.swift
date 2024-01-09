@@ -53,4 +53,19 @@ class Sorting {
         }
          return arr
     }
+    
+    //MARK: - INSERTION SORT.
+    /// Time Complexity => O(n2).
+    /// Space Complexity => O(1).
+    func insertionSort(arr: inout [Int]) -> [Int] {
+        for i in stride(from: 1, to: arr.count, by: 1) {
+            for j in stride(from: 0, to: i, by: 1) {
+                if arr[j] > arr[j+1] {
+                    arr.swapAt(j, j+1)
+                }
+            }
+        }
+        
+        return arr
+    }
 }
