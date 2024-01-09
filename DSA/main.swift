@@ -97,3 +97,6 @@ print(sort.bubbleSort(arr: &arrToSort))
 
 //MARK: - 3. Insertion Sort.
 print(sort.insertionSort(arr: &arrToSort))
+
+//MARK: - 4. Merge Sort.
+print(sort.mergeSort(arr: &arrToSort))
