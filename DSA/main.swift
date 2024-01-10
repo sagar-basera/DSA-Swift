@@ -100,3 +100,6 @@ print(sort.insertionSort(arr: &arrToSort))
 
 //MARK: - 4. Merge Sort.
 print(sort.mergeSort(arr: &arrToSort))
+
+//MARK: - Quick Sort.
+print(sort.quickSort(arr: &arrToSort))

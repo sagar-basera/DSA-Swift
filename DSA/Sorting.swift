@@ -71,7 +71,7 @@ class Sorting {
     
     //MARK: - MERGE SORT.
     /// Divide & Conquer Algorithm.
-    /// Time Complexity => O(nlogn), Because at every step we divide the whole array, for that "logn" and we assume "n" steps are taken to get sorted Array.
+    /// Time Complexity => O(nLogn), Because at every step we divide the whole array, for that "logn" and we assume "n" steps are taken to get sorted Array.
     /// Space Complexity => O(n), Because we are using a tempArr to store elements in sorted order.
     func mergeSort(arr: inout [Int]) -> [Int] {
         let low = 0
@@ -118,6 +118,47 @@ class Sorting {
         for i in stride(from: low, to: high, by: 1) {
             arr[i] = tempArr[i-low]
         }
+    }
+    
+    //MARK: - QUICK SORT.
+    /// Time Complexity => O(nLogn)
+    /// Space Complexity => O(1) + O(n) auxilary stack space.
+    /// Divide & Conquer Algorithm.
+    func quickSort(arr: inout [Int]) -> [Int] {
+        let low = 0
+        let high = arr.count-1
+        qS(arr: &arr, low: low, high: high)
+        return arr
+    }
+    
+    private func qS(arr: inout [Int], low: Int, high: Int) {
+        if low < high {
+            let pivot = findPivot(arr: &arr, low: low, high: high)
+            qS(arr: &arr, low: low, high: pivot-1)
+            qS(arr: &arr, low: pivot+1, high: high)
+        }
+    }
+    
+    private func findPivot(arr: inout[Int], low: Int, high: Int) -> Int {
+        let pivot = arr[low]
+        var i = low
+        var j = high
+        
+        while(i < j) {
+            while(arr[i] <= pivot && i <= high) {
+                i += 1
+            }
+            
+            while(arr[j] > pivot && j >= low) {
+                j -= 1
+            }
+            
+            if (i < j) {
+                arr.swapAt(i, j)
+            }
+        }
+        
+        return j
     }
     
 }
