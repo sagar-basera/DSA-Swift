@@ -38,4 +38,12 @@ class Arrays {
         }
         return secondLargest
     }
+    
+    //MARK: - CHECK IF ARRAY IS SORTED OR NOT.
+    func checkSortedArr(arr: inout [Int]) -> Bool {
+        for i in stride(from: 1, to: arr.count, by: 1) {
+            if (arr[i] < arr[i-1]) { return false }
+        }
+        return true
+    }
 }

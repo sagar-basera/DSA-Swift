@@ -46,6 +46,10 @@ print(array.largestElementInArr(arr: [3, 2, 1, 9, 2, 7]))
 //MARK: - 2. Second largest element in an Array.
 print(array.secondLargestElementInArr(arr: [2,5,5,8,8,3,7]))
 
+//MARK: - 3. Check if the array is sorted or not.
+var checkArr = [3, 4, 1, 5, 6, 7, 8, 9]
+print(array.checkSortedArr(arr: &checkArr))
+
 
 //MARK: - MATHS QUESTIONS.
 print("QUESTIONS ON MATH'S__________________________________________")
