@@ -46,4 +46,41 @@ class Arrays {
         }
         return true
     }
+    
+    //MARK: - REMOVE DUPLICATES IN AN ARRAY.
+    func removeDuplicates(arr: inout [Int]) -> [Int] {
+        /// using Swift algorithms module Package(SPM).
+        /// import ALgorithms.
+       // return arr.uniqued()
+        
+        /// Using Contains() methods.
+        var filteredArr: [Int] = []
+        
+        for i in stride(from: 0, to: arr.count, by: 1) {
+            if !filteredArr.contains(arr[i]) {
+                filteredArr.append(arr[i])
+            }
+        }
+        
+        return filteredArr
+        
+        /// Using Extension on Array.
+        /// Can be seen in bottom of this class.
+    }
+     
+}
+
+//MARK: - EXTENSION ON ARRAY'S TO REMOVE DUPLICATE ELEMENTS.
+extension Array where Element: Equatable {
+    func removeDupes() -> [Element] {
+        var filteredArr: [Element] = []
+        
+        for item in self {
+            if !filteredArr.contains(item) {
+                filteredArr.append(item)
+            }
+        }
+        
+        return filteredArr
+    }
 }

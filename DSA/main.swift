@@ -50,7 +50,13 @@ print(array.secondLargestElementInArr(arr: [2,5,5,8,8,3,7]))
 var checkArr = [3, 4, 1, 5, 6, 7, 8, 9]
 print(array.checkSortedArr(arr: &checkArr))
 
+//MARK: - 4. Remove Duplicate in an Array.
+var dupArr = [1, 1, 1, 2, 3, 4, 4, 5, 6, 7, 7]
+print(array.removeDuplicates(arr: &dupArr))
+let filteredArr = dupArr.removeDupes()
+print(filteredArr)
 
+print()
 //MARK: - MATHS QUESTIONS.
 print("QUESTIONS ON MATH'S__________________________________________")
 //MARK: - 1. COUNT DIGITS OF NUMBERS.
