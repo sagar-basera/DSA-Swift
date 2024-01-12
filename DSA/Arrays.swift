@@ -53,6 +53,9 @@ class Arrays {
         /// import ALgorithms.
        // return arr.uniqued()
         
+        /// Using Extension on Array.
+        /// Can be seen in bottom of this class.
+        
         /// Using Contains() methods.
         var filteredArr: [Int] = []
         
@@ -63,9 +66,18 @@ class Arrays {
         }
         
         return filteredArr
+    }
+    
+    //MARK: - ROTATE THE ARRAY BY 1 PLACE.
+    func rotateArrByOnePlace(arr: inout [Int]) -> [Int] {
+        var temp = arr[0]
         
-        /// Using Extension on Array.
-        /// Can be seen in bottom of this class.
+        for i in stride(from: 1, to: arr.count, by: 1) {
+            arr[i-1] = arr[i]
+        }
+        
+        arr[arr.count-1] = temp
+        return arr
     }
      
 }

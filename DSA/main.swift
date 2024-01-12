@@ -56,6 +56,10 @@ print(array.removeDuplicates(arr: &dupArr))
 let filteredArr = dupArr.removeDupes()
 print(filteredArr)
 
+//MARK: - 5. Rotate the Array by one place.
+var rotateArr = [1,2,3,4,5,6,7,8]
+print("Rotate Array By One Place => ", array.rotateArrByOnePlace(arr: &rotateArr))
+
 print()
 //MARK: - MATHS QUESTIONS.
 print("QUESTIONS ON MATH'S__________________________________________")
