@@ -69,8 +69,10 @@ class Arrays {
     }
     
     //MARK: - ROTATE THE ARRAY BY 1 PLACE.
+    /// Time Complexity:- O(n).
+    /// Space Complexity:- O(1).
     func rotateArrByOnePlace(arr: inout [Int]) -> [Int] {
-        var temp = arr[0]
+        let temp = arr[0]
         
         for i in stride(from: 1, to: arr.count, by: 1) {
             arr[i-1] = arr[i]
@@ -80,6 +82,15 @@ class Arrays {
         return arr
     }
      
+    //MARK: - LINEAR SEARCH.
+    func linearSearch(arr: [Int], k: Int) -> Int {
+        for i in stride(from: 0, to: arr.count, by: 1) {
+            if arr[i] == k {
+                return i
+            }
+        }
+        return -1
+    }
 }
 
 //MARK: - EXTENSION ON ARRAY'S TO REMOVE DUPLICATE ELEMENTS.
