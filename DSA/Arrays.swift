@@ -91,6 +91,45 @@ class Arrays {
         }
         return -1
     }
+    
+    //MARK: - UNION OF ARRAY'S.
+    /// Time Complexity:- O(n1+n2).
+    /// Space Complecity:- O(n1+n2).
+    func unionArr(arr1: [Int], arr2: [Int]) -> [Int] {
+        var (i, j) = (0, 0)
+        var (n1, n2) = (arr1.count, arr2.count)
+        var unionArr: [Int] = []
+        
+        while(i < n1 && j < n2) {
+            if(arr1[i] <= arr2[j]) {
+                if (unionArr.count == 0 || unionArr.last != arr1[i]) {
+                    unionArr.append(arr1[i])
+                }
+                i += 1
+            }else {
+                if (unionArr.count == 0 || unionArr.last != arr2[j]) {
+                    unionArr.append(arr2[j])
+                }
+                j += 1
+            }
+        }
+        
+        while(i < n1) {
+            if(unionArr.count == 0 || unionArr.last != arr1[i]) {
+                unionArr.append(arr1[i])
+            }
+            i += 1
+        }
+        
+        while(j < n2) {
+            if(unionArr.count == 0 || unionArr.last != arr2[j]) {
+                unionArr.append(arr2[j])
+            }
+            j += 1
+        }
+        
+        return unionArr
+    }
 }
 
 //MARK: - EXTENSION ON ARRAY'S TO REMOVE DUPLICATE ELEMENTS.
