@@ -97,7 +97,7 @@ class Arrays {
     /// Space Complecity:- O(n1+n2).
     func unionArr(arr1: [Int], arr2: [Int]) -> [Int] {
         var (i, j) = (0, 0)
-        var (n1, n2) = (arr1.count, arr2.count)
+        let (n1, n2) = (arr1.count, arr2.count)
         var unionArr: [Int] = []
         
         while(i < n1 && j < n2) {
@@ -129,6 +129,27 @@ class Arrays {
         }
         
         return unionArr
+    }
+    
+    //MARK: - INTERSECTION OF ARRAY.
+    /// Time Complexity:- O(n1+n2).
+    /// Spcae Complexity:- O(1).
+    func intersectionArr(arr1: [Int], arr2: [Int]) -> [Int] {
+        var(i, j) = (0, 0)
+        let(n1, n2) = (arr1.count, arr2.count)
+        var intersectionArr: [Int] = []
+        
+        while(i < n1 && j < n2) {
+            if(arr1[i] == arr2[j]) {
+                intersectionArr.append(arr1[i])
+                i += 1
+                j += 1
+            }else {
+                i += 1
+            }
+        }
+        
+        return intersectionArr
     }
 }
 

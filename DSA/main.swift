@@ -66,6 +66,9 @@ print("Linear Search => ", array.linearSearch(arr: [1,3,4,5,6,7,8], k: 9))
 //MARK: - 7. Union of Array.
 print("Union of Array's =>", array.unionArr(arr1: [1,1,2,3,4,5,9], arr2: [2,3,4,5,6]))
 
+//MARK: - 8. Intersection of Array.
+print("Intersection of Array's =>", array.intersectionArr(arr1: [1,2,2,3,3,4,5,6], arr2: [2,3,3,5,6,6,7]))
+
 print()
 //MARK: - MATHS QUESTIONS.
 print("QUESTIONS ON MATH'S__________________________________________")
