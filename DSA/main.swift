@@ -69,6 +69,10 @@ print("Union of Array's =>", array.unionArr(arr1: [1,1,2,3,4,5,9], arr2: [2,3,4,
 //MARK: - 8. Intersection of Array.
 print("Intersection of Array's =>", array.intersectionArr(arr1: [1,2,2,3,3,4,5,6], arr2: [2,3,3,5,6,6,7]))
 
+//MARK: - 9. LONGEST SUB-ARRAY WITH GIVEN SUM K(positives).
+print("Brute Force Longest Sub-Array =>", array.bruteForceLongestSubArr(arr: [1,2,3,1,1,1,1,4,2,3], K: 4))
+print("Optimal Longest Sub-Array =>", array.optimalLongestSubArr(arr: [1,2,3,1,1,1,1,4,2,3], K: 4))
+
 print()
 //MARK: - MATHS QUESTIONS.
 print("QUESTIONS ON MATH'S__________________________________________")

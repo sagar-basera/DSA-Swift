@@ -151,6 +151,69 @@ class Arrays {
         
         return intersectionArr
     }
+    
+    //MARK: - LONGEST SUB-ARRAY WITH GIVEN SUM K(positives).
+    func bruteForceLongestSubArr(arr: [Int], K: Int) -> Int {
+        var length = 0
+        
+        /// Time Complexity:- nearly O(n3).
+        /// Spcae Complexity:- O(1).
+        /*
+        for i in stride(from: 0, to: arr.count, by: 1) {
+            for j in stride(from: i, to: arr.count, by: 1) {
+                var sum = 0
+                for k in stride(from: i, to: j, by: 1) {
+                    sum += arr[k]
+                }
+                
+                if sum == K {
+                    length = max(length, j-i)
+                }
+            }
+        }
+        */
+        
+        /// Time Complexity:- O(n2).
+        /// Spcae Complexity:- O(1).
+        for i in stride(from: 0, to: arr.count, by: 1) {
+            var sum = 0
+            for j in stride(from: i, to: arr.count, by: 1) {
+                sum += arr[j]
+                
+                if sum == K {
+                    length = max(length, j-i)
+                }
+            }
+            
+        }
+        
+        return length
+    }
+    
+    /// Time Complexity:- O(2*n).
+    /// Spcae Complexity:- O(1).
+    func optimalLongestSubArr(arr: [Int], K: Int) -> Int {
+        var (left, right, n) = (0, 0, arr.count)
+        var sum = arr[0]
+        var length = 0
+        
+        while (right < n) {
+            while (left <= right && sum > K) {
+                sum -= arr[left]
+                left += 1
+            }
+            
+            if sum == K {
+                length = max(length, right-left+1)
+            }
+            
+            right += 1
+            if (right < n) { sum += arr[right] }
+        }
+        
+        return length
+    }
+    
 }
 
 //MARK: - EXTENSION ON ARRAY'S TO REMOVE DUPLICATE ELEMENTS.
