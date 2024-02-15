@@ -214,6 +214,23 @@ class Arrays {
         return length
     }
     
+    //MARK: - LEADER IN AN ARRAY.
+    /// Time Complexity:- O(n).
+    /// Spcae Complexity:- O(n).
+    func leaderInArr(arr: [Int]) -> [Int] {
+        var leader: [Int] = []
+        var max = Int.min
+        
+        for i in stride(from: arr.count-1, to: 1, by: -1) {
+            if arr[i] > max {
+                max = arr[i]
+                leader.append(max)
+            }
+        }
+        
+        return leader
+    }
+    
 }
 
 //MARK: - EXTENSION ON ARRAY'S TO REMOVE DUPLICATE ELEMENTS.

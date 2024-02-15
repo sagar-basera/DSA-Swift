@@ -73,6 +73,9 @@ print("Intersection of Array's =>", array.intersectionArr(arr1: [1,2,2,3,3,4,5,6
 print("Brute Force Longest Sub-Array =>", array.bruteForceLongestSubArr(arr: [1,2,3,1,1,1,1,4,2,3], K: 4))
 print("Optimal Longest Sub-Array =>", array.optimalLongestSubArr(arr: [1,2,3,1,1,1,1,4,2,3], K: 4))
 
+//MARK: - 10. LEADER IN AN ARRAY.
+print("Leader in an Array =>", array.leaderInArr(arr: [10,22,24,8,0,6]))
+
 print()
 //MARK: - MATHS QUESTIONS.
 print("QUESTIONS ON MATH'S__________________________________________")
@@ -120,7 +123,7 @@ var arrToSort = [13, 46, 24, 52, 20, 9, -7]
 print(sort.selectionSort(arr: &arrToSort))
 
 //MARK: - 2. Bubble Sort.
-print(sort.bubbleSort(arr: &arrToSort))
+print("BUBBLE SORT: ",sort.bubbleSort(arr: &arrToSort))
 
 //MARK: - 3. Insertion Sort.
 print(sort.insertionSort(arr: &arrToSort))
