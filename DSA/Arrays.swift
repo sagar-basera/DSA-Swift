@@ -231,6 +231,59 @@ class Arrays {
         return leader
     }
     
+   //MARK: - LONGEST CONSECUTIVE SEQUENCE IN AN ARRAY.
+    /// Time Complexity:- O(n)* O(n).
+    /// Spcae Complexity:- O(1).
+    /// Brute-Force.
+    func longestConsSequneceBF(arr: inout [Int]) -> Int {
+        var longest = 0
+        
+        for i in stride(from: 0, to: arr.count, by: 1) {
+            var x = arr[i]
+            var count = 1
+            
+            while(searchNum(arr: arr, num: x+1) == true) {
+                x = x + 1
+                count += 1
+            }
+            
+            longest = max(longest, count)
+        }
+        
+        func searchNum(arr: [Int], num: Int) -> Bool {
+            for i in stride(from: 0, to: arr.count, by: 1) {
+                if arr[i] == num {
+                    return true
+                }
+            }
+            return false
+        }
+        
+        return longest
+    }
+    
+    /// Time Complexity:- O(n)+O(2*n).
+    /// Spcae Complexity:- O(n).
+    func longestConsSequneceOptimal(arr: [Int]) -> Int {
+        var longest = 0
+        var arrSet = Set(arr)
+        
+        arrSet.forEach { item in
+            if !arrSet.contains(item-1) {
+                var count = 1
+                var x = item
+                
+                while (arrSet.contains(x+1)) {
+                    x += 1
+                    count += 1
+                }
+                longest = max(longest, count)
+            }
+        }
+        
+        return longest
+    }
+    
 }
 
 //MARK: - EXTENSION ON ARRAY'S TO REMOVE DUPLICATE ELEMENTS.

@@ -76,6 +76,11 @@ print("Optimal Longest Sub-Array =>", array.optimalLongestSubArr(arr: [1,2,3,1,1
 //MARK: - 10. LEADER IN AN ARRAY.
 print("Leader in an Array =>", array.leaderInArr(arr: [10,22,24,8,0,6]))
 
+//MARK: - 11. LONGEST CONSECUTIVE SEQUENCE IN AN ARRAY.
+var arrCon = [100, 101, 4, 3, 2, 1, 103, 5]
+print("Longest Consecutive Sequence Brute Force =>", array.longestConsSequneceBF(arr: &arrCon))
+print("Longest Consecutive Sequence Optimal =>", array.longestConsSequneceOptimal(arr: arrCon))
+
 print()
 //MARK: - MATHS QUESTIONS.
 print("QUESTIONS ON MATH'S__________________________________________")
