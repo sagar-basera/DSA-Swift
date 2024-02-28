@@ -284,6 +284,79 @@ class Arrays {
         return longest
     }
     
+    //MARK: - SET MATRIX ZERO.
+    /// Time Complexity:- O(2*(n*m)).
+    /// Spcae Complexity:- O(n)+ O(m).
+    func setMatrixZeroBetterApproach(_ matrix: inout [[Int]]) {
+        let row = matrix.count
+        let col = matrix[0].count
+        
+        var rowArr = [Int](repeating: 0, count: row)
+        var colArr = [Int](repeating: 0, count: col)
+        
+        for i in stride(from: 0, to: row, by: 1) {
+            for j in stride(from: 0, to: col, by: 1) {
+                if matrix[i][j] == 0 {
+                    rowArr[i] = 1
+                    colArr[j] = 1
+                }
+            }
+        }
+        
+        for i in stride(from: 0, to: row, by: 1) {
+            for j in stride(from: 0, to: col, by: 1) {
+                if (rowArr[i] == 1 || colArr[j] == 1) {
+                    matrix[i][j] = 0
+                }
+            }
+        }
+        
+    }
+    
+    /// Time Complexity:- O(2*(n*m)).
+    /// Spcae Complexity:- O(1).
+    func setMatrixZeroOptimal(_ matrix: inout [[Int]]) {
+        let row = matrix.count
+        let col = matrix[0].count
+        var col0 = 1
+        
+        for i in stride(from: 0, to: row, by: 1) {
+            for j in stride(from: 0, to: col, by: 1) {
+                if (matrix[i][j] == 0) {
+                    matrix[i][0] = 0
+                    
+                    if (j != 0) {
+                        matrix[0][j] = 0
+                    }else {
+                        col0 = 0
+                    }
+                }
+            }
+        }
+        
+        for i in stride(from: 1, to: row, by: 1) {
+            for j in stride(from: 1, to: col, by: 1) {
+                if (matrix[i][j] != 0) {
+                    
+                    if (matrix[i][0] == 0 || matrix[0][j] == 0) {
+                        matrix[i][j] = 0
+                    }
+                }
+            }
+        }
+        
+        if (matrix[0][0] == 0) {
+            for j in stride(from: 1, to: col, by: 1) {
+                matrix[0][j] = 0
+            }
+        }
+        
+        if (col0 == 0) {
+            for i in stride(from: 1, to: row, by: 1) {
+                matrix[i][0] = 0
+            }
+        }
+    }
 }
 
 //MARK: - EXTENSION ON ARRAY'S TO REMOVE DUPLICATE ELEMENTS.

@@ -81,6 +81,15 @@ var arrCon = [100, 101, 4, 3, 2, 1, 103, 5]
 print("Longest Consecutive Sequence Brute Force =>", array.longestConsSequneceBF(arr: &arrCon))
 print("Longest Consecutive Sequence Optimal =>", array.longestConsSequneceOptimal(arr: arrCon))
 
+//MARK: - 12. SET MATRIX ZERO.
+var arr2D: [[Int]] = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
+var arr2Doptimal: [[Int]] = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
+array.setMatrixZeroBetterApproach(&arr2D)
+print("Set Matrix Zero Better Approach =>", arr2D)
+array.setMatrixZeroOptimal(&arr2Doptimal)
+print("Set Matrix Zero Optimal Approach =>", arr2Doptimal)
+
+
 print()
 //MARK: - MATHS QUESTIONS.
 print("QUESTIONS ON MATH'S__________________________________________")
